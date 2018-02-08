@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Ejercicio formulario
+        </title>
+    </head>
+    <body>
+        <form>
+            <h1>Register</h1>
+            <div>
+                <label for="name">First Name:</label>
+                <input type="text" id="name" name="name" placeholder="your first name">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="your last name">
+            </div>
+            <div>
+                <label>Male</label><input id="Male" name="genero" type="radio" value="Male">
+                <label>Female</label><input id="Female" name="genero" type="radio" value="Female">
+                <label>Other</label><input id="Other" name="genero" type="radio" value="Other">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="your email">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="pass" placeholder="your password">
+            </div>
+            <div>
+                <label>Birthday:</label>
+                <select>
+                    <option>Month</option>
+                </select>
+                <select>
+                    <option>Day</option>
+                </select>
+                <select>
+                    <option>Year</option>
+                </select>                                
+            </div>
+            <div>
+                <label for="terms">I agree to the terms and conditions</label>
+                <input type="checkbox" name="terms" id="terms">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
