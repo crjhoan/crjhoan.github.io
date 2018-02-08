@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Ejemplo de formulario</h1>
+        <form method="POST" action="https://tecweb-eloyhz.c9users.io/envio.php">
+            <div>
+            <label for="nom">Nombre:</label>
+            <input id="nom" name="nombre" type="text" placeholder="Escribe tu nombre completo">
+            </div>
+            <div>
+            <label for="pass">Contraseña:</label> 
+            <input id="pass" name="contrasena" type="password" required placeholder="Escribe tu contraseña">
+            </div>
+            <div>
+                <label for="genero">Género:</label>
+                <div>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="genero" value="Masculino">
+                </div>
+                <div>
+                <label for="femenino">Femenino</label>    
+                <input type="radio" id "femenino" name="genero" value="Femenino">
+                </div>
+            </div>
+            <div>
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera">
+                    <option value="1">Ingeniería en computación</option>
+                    <option value="2">Ingeniería en informática</option>
+                    <option value="3">Ingeniería en sistemas inteligentes</option>
+                </select>
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>
