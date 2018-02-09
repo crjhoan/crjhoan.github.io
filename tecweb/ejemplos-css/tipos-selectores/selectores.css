@@ -1,0 +1,26 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    border: solid 1px lightgray;
+}
+
+p {
+    color: blue;
+}
+
+.relleno {
+    color: green;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+#especial {
+    text-transform: capitalize;
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
