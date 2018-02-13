@@ -42,5 +42,31 @@ body > div:hover {
 }
 
 a:visited {
-    text-transform: uppercase;
+    color: yellow;
 }
+
+li:nth-of-type(even) {
+    background-color: tan;
+}
+
+p::first-letter {
+    color: blue;
+    font-size: 30px;
+}
+
+li {
+    background-color: skyblue;
+}
+
+#especial2 {
+    background-color: seagreen;
+}
+
+.primero {
+    background-color: powderblue;
+}
+
+li {
+    background-color: sandybrown;
+}
+
