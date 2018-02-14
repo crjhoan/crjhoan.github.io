@@ -1,0 +1,37 @@
+.caja-azul {
+    background-color: blue;
+    color: white;
+    border: solid 10px darkblue;
+}
+
+.caja-amarilla {
+    background-color: yellow;
+    border: solid 10px darkgoldenrod;
+}
+
+div {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+div:nth-of-type(1){
+    padding-bottom: 30px;
+}
+
+.caja {
+    background-color: white;
+
+}
+
+.en-linea {
+    display: inline;
+}
+
+.en-bloque {
+    display: inline-block;
+}
+
+.en-linea-bloque {
+    display: inline-block;
+}
