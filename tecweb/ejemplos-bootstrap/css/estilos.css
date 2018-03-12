@@ -1,0 +1,15 @@
+.mi-contenedor{
+    border: 1px solid green;
+}
+
+.mi-fila {
+    border: 3px solid red;
+}
+
+.mi-columna {
+    border: 3px dotted blue;
+}
+
+body {
+    margin: 30px;
+}
