@@ -14,6 +14,17 @@ if($resultado!=false)
 
 //var_dump($calificaciones);
 
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    $materia=$_POST['materia'];
+    $calificacion=$_POST['calificacion'];
+    $sql="INSERT INTO `calificaciones` (`id`, `materia`, `calificacion`) VALUES (NULL, '$materia', '$calificacion')";
+    $resultado=$conexion->query($sql);
+    var_dump($resultado);
+    if($resultado==false){
+        die("Error al momento de insertar en la base de datos");
+    }
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,6 +38,9 @@ if($resultado!=false)
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
+  <div class="container">
+    <div class="row">
+    <div class="col-md-8">
       <table class="table">
           <thead>
               <tr>
@@ -45,6 +59,23 @@ if($resultado!=false)
               <?php endforeach ?>
           </tbody>
       </table>
+      </div>
+      <div class="col-md-4">
+      <form action="" method='POST'>
+            <div class="form-group">
+                <label for="">Materia</label>
+                <input type="text"class="form-control" name="materia" id="" aria-describedby="helpId" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="">Calificación</label>
+              <input type="number"
+                class="form-control" name="calificacion" id="" aria-describedby="helpId" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+      </form>
+      </div>
+      </div>
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
