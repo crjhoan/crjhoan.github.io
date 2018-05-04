@@ -28,6 +28,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 class="form-control" name="calificacion" id="" aria-describedby="helpId" placeholder="">
             </div>
             <button type="submit" class="btn btn-primary">Agregar</button>
+            <a href="index.php" class="btn btn-warning">Cancelar</a>
       </form>
       </div>
         </div>

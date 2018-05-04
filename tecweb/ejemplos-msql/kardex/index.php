@@ -36,6 +36,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                   <th>Numero</th>
                   <th>Materia</th>
                   <th>Calificacion</th>
+                  <th>Operaciones</th>
               </tr>
           </thead>
           <tbody>
@@ -44,6 +45,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                   <td scope="row"><?php echo $calificacion['id'];?></td>
                   <td scope="row"><?=$calificacion['materia']?></td>
                   <td scope="row"><?= $calificacion['calificacion']?></td>
+                  <td scope="row"><a href="eliminar.php?id=<?=$calificacion['id'];?>">Eliminar</a></td>
               </tr>
               <?php endforeach ?>
           </tbody>
