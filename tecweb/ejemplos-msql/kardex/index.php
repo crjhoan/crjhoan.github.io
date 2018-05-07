@@ -50,6 +50,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
               <?php endforeach ?>
           </tbody>
       </table>
+      <?php if(isset($_GET['correcto'])):?>
+      <div class="alert alert-success" role="alert">
+          <strong><?=$_GET['correcto']?></strong>
+      </div>
+      <?php endif?>
         <a href="agregar.php" class="btn btn-primary">Agregar nueva materia</a>
       </div>
       </div>
