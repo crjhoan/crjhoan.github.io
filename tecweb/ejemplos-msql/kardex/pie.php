@@ -1,4 +1,4 @@
-<div class="pie py-5 bg-success">
+<div class="pie py-5 bg-success my-3">
             <h3>Pie de pagina</h3>
         </div>
       </div>

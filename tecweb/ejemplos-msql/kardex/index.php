@@ -45,7 +45,14 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                   <td scope="row"><?php echo $calificacion['id'];?></td>
                   <td scope="row"><?=$calificacion['materia']?></td>
                   <td scope="row"><?= $calificacion['calificacion']?></td>
-                  <td scope="row"><a href="eliminar.php?id=<?=$calificacion['id'];?>">Eliminar</a></td>
+                  <td scope="row">
+                  <span class="mr-3 h4">
+                  <a href="eliminar.php?id=<?=$calificacion['id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                  </span>
+                  <span class="h4">
+                  <a href="modificar.php?id=<?=$calificacion['id'];?>"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                  </span>
+                  </td>
               </tr>
               <?php endforeach ?>
           </tbody>
