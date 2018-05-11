@@ -29,6 +29,7 @@ if(isset($_POST['usuario']) && isset($_POST['contraseña'])){
     <input type="text" name="usuario" placeholder="Nombre de usuario">
     <input type="password" name="contraseña" placeholder="Contraseña">
     <button type="submit">Acceder</button>
+    <p><a href="registrar.php">Regístrate</a></p>
     </form>
     <?php if($errores!=""): ?>
     <p> <?=$errores?> </p>
