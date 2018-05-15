@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $contraseña=$_POST['contraseña1'];
     $sql ="SELECT * FROM `usuarios` WHERE `usuario`='$usuario'";
     $resultado=$conexion->query($sql);
-    if($resultado==false || $resultado->fetch()==false){
+    if($resultado->fetch()==false){
         $sql1="INSERT INTO `usuarios` (`id_usuario`,`usuario`, `contrasena`) VALUES (NULL, '$usuario', '$contraseña')";
         $resultado2=$conexion->query($sql1);
         $errores= 'Usuario registrado';
@@ -34,6 +34,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <input type="password" name="contraseña1" placeholder="Contraseña">
     <input type="password" name="contraseña2" placeholder="Confirme contraseña">
     <button type="submit">Registrar</button>
+    <p><a href="index.php">Index</a></p>
     </form>
     <?php if($errores!=""): ?>
     <p> <?=$errores?> </p>

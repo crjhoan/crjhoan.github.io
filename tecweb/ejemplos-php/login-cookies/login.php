@@ -1,11 +1,13 @@
 <?php
+include 'conexion.php';
 $errores="";
 if(isset($_POST['usuario']) && isset($_POST['contraseña'])){
     $usuario=$_POST['usuario'];
     $contraseña=$_POST['contraseña'];
-    //Consultar la base de datos y comparar con los valores
-    //que allí están almacenados
-    if($usuario=='Jhoan' && $contraseña=='123'){
+    $sql="SELECT * FROM `usuarios` WHERE `usuario`='$usuario'";
+    $resultado=$conexion->query($sql);
+    $result=$resultado->fetch(PDO::FETCH_ASSOC);
+    if(count($result)>0 && $contraseña==$result['contrasena']){
         setcookie('usuario',"$usuario");
         header('Location: index.php');
         return;
