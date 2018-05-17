@@ -1,4 +1,5 @@
 <?php
+//session_start();
 include 'conexion.php';
 $errores="";
 if(isset($_POST['usuario']) && isset($_POST['contraseña'])){
@@ -7,8 +8,11 @@ if(isset($_POST['usuario']) && isset($_POST['contraseña'])){
     $sql="SELECT * FROM `usuarios` WHERE `usuario`='$usuario'";
     $resultado=$conexion->query($sql);
     $result=$resultado->fetch(PDO::FETCH_ASSOC);
-    if(count($result)>0 && $contraseña==$result['contrasena']){
+    //FETCH_OBJ
+    //$sentencia->fetchObject();
+    if(count($result)>0 && password_verify($contraseña,$result['contrasena'])){
         setcookie('usuario',"$usuario");
+        //SESIION['usuario']=$usuario;
         header('Location: index.php');
         return;
     }else{

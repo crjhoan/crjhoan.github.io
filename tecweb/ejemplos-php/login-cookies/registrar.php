@@ -6,9 +6,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $usuario=$_POST['usuario'];
     $contraseña=$_POST['contraseña1'];
     $sql ="SELECT * FROM `usuarios` WHERE `usuario`='$usuario'";
+    //$sql ="SELECT * FROM `usuarios` WHERE `usuario`=:usuario";
+    //$sentencia=$conexion->prepare($sql);
+    //$sentencia->bindValue(':usuario',$usuario);
     $resultado=$conexion->query($sql);
     if($resultado->fetch()==false){
-        $sql1="INSERT INTO `usuarios` (`id_usuario`,`usuario`, `contrasena`) VALUES (NULL, '$usuario', '$contraseña')";
+        $hash_contraseña=password_hash($contraseña,PASSWORD_DEFAULT);
+        $sql1="INSERT INTO `usuarios` (`id_usuario`,`usuario`, `contrasena`) VALUES (NULL, '$usuario', '$hash_contraseña')";
         $resultado2=$conexion->query($sql1);
         $errores= 'Usuario registrado';
     }

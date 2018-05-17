@@ -1,7 +1,7 @@
 <?php
 $fuente = "mysql:host=localhost;dbname=kardexdb";
 $usuario ="root";
-$contraseña="";
+$contraseña="root";
 try{
     $conexion= new PDO($fuente, $usuario, $contraseña);
 }catch(PDOException $ex){
