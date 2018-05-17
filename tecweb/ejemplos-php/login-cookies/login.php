@@ -3,6 +3,7 @@
 include 'conexion.php';
 $errores="";
 if(isset($_POST['usuario']) && isset($_POST['contraseña'])){
+    //$usuario=filter(INPUT_POST,'usuario',FILTER_SANITIZE_STRING);
     $usuario=$_POST['usuario'];
     $contraseña=$_POST['contraseña'];
     $sql="SELECT * FROM `usuarios` WHERE `usuario`='$usuario'";
