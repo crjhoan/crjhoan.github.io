@@ -17,26 +17,20 @@
                 <div class="form-group">
                   <input type="text" class="form-control" name="" id="tarea" aria-describedby="helpId" placeholder="Tarea">
                 </div>
-                <button onclick="agregar()" type="button" name="" id="" class="btn btn-primary btn-lg btn-block">Agregar</button>
+                <button type="button" name="" id="btn-agregar" class="btn btn-primary btn-lg btn-block">Agregar</button>
               </div>
               <div class="col-md-6">
                 <h2>Lista de tareas</h2>
-                <ul id="lista-tareas">
-                    
+                <ul class="list-group" id="lista-tareas">
+                    <li id="tarea1" class="list-group-item">Tarea 1</li>
+                    <li id="tarea2" class="list-group-item">Tarea 2</li>
                 </ul>
+                <p>Total de tareas <span id="total" class="badge badge-primary">0</span></p>
               </div>
           </div>
       </div>
       
-      <script>
-      
-        function agregar(){
-            var tarea=document.getElementById('tarea').value;
-            var listaTareas=document.getElementById('lista-tareas');
-            listaTareas.innerHTML+="<li>" + tarea + "</li>";
-        }
-
-      </script>
+    <script src="tareas.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
