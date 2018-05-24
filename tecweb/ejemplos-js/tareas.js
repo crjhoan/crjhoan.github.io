@@ -5,6 +5,10 @@ btnAgregar.onclick=agregar;
 var tarea1 = document.getElementById('tarea1');
 var tarea2 = document.getElementById('tarea2');
 
+var btnBorrar=document.getElementById('btn-borrar');
+
+btnBorrar.addEventListener('click',borrarTodo);
+
 tarea1.ondblclick=resaltar;
 tarea2.ondblclick=resaltar;
 
@@ -22,6 +26,20 @@ function agregar(){
     var total=document.getElementById('total');
     total.innerText++;
 }
+}
+
+function borrarTodo(){
+    // if(confirm("¿Estas seguro de borrar todo?")){
+    //     console.log("Voy a borrar todo...");
+    // }else{
+    //     console.log("No voy a borrar nada");
+    // }
+    var listaTareas=document.getElementById('lista-tareas');
+    while(listaTareas.firstChild){
+        listaTareas.removeChild(listaTareas.firstChild);
+    }
+    var total=document.getElementById('total');
+    total.value="";
 }
 
 function resaltar(evento){
